@@ -1,0 +1,21 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* myCanvas의 높이를 따로 지정하지 않음 - 화면 크기에 따라 조절하기 위해 js에서 처리할 예정 */
+#myCanvas {
+  background-color:#ddd;
+  border-bottom : 1px solid #000;
+  margin-bottom: 5px;
+}
+
+table {
+  width:100%;
+}
+
+#canvasImage {
+  width:75%;
+  height:75%;
+}

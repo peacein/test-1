@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>curve using canvas</title>
+</head>
+<body>
+  <canvas></canvas>
+
+  <script>
+    const canvas = document.querySelector('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function drawCurve() {
+      if(canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(20,20);
+        ctx.bezierCurveTo(20,200, 50, 200, 50, 20);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+      
+        ctx.moveTo(30, 20);
+        ctx.bezierCurveTo(30,180, 40, 180, 40, 20);
+        ctx.fillStyle = "coral";
+        ctx.stroke();
+      }  else {
+        alert('Your browser does not support canvas');
+      }
+    }
+
+    drawCurve();
+  </script>
+</body>
+</html>
